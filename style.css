@@ -15,7 +15,7 @@ body{
 .section2{
   background-color: darkgreen;
   min-height: 100vh;
-  font-family: 'Yomogi', cursive;
+  font-family: 'Merienda', cursive;
 }
 
 .carousel-inner > .carousel-item {
@@ -34,7 +34,8 @@ body{
 .section3{
   background-color: blueviolet;
   min-height: 100vh;
-  font-family: 'Yomogi', cursive;
+  font-family: 'Anton', sans-serif;
+  font-size: 26px;
 }
 
 .btn-descobrir{

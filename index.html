@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+  <!-- Imagens usadas para fins exclusivamente educacionais. Todos os direitos reservados ao autor -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=">
@@ -10,7 +11,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Yomogi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -46,29 +47,29 @@
             <div class="carousel-item active">
               <img src="img/aqua-park.jpg" class="d-block w-100" alt="visa aerea aqua park">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>Vista Aérea do Aqua Park</h5>
+                <p>Diversão para toda a família</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="img/aqua-park1.jpg" class="d-block w-100" alt="familia na piscina">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h5>Piscinas para todas as idades</h5>
+                <p>Diversão para toda a família</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="img/cacoal-selva-park-hotel (2).jpg" class="d-block w-100" alt="cabanas">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5>Conforto no meio da floresta Amazônica</h5>
+                <p>Diversão para toda a família</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="img/cacoal-selva-park-hotel (1).jpg" class="d-block w-100" alt="quarto cabanas">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5>Conforto e segurança para suas férias</h5>
+                <p>Diversão para toda a família</p>
               </div>
             </div>
           </div>
@@ -86,11 +87,12 @@
       </div>
       <div class="col-md-12 section3">
         <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-          <h1 class="h1 animate__animated animate__fadeInDown align-middle" id="formlead">Formulário de Contato
-          </h1>
+          <p class="p animate__animated animate__fadeInDown align-middle" id="formlead">Deixe seu nome e e-mail e
+            garanta 15% off na sua hospedagem no melhor Hotel Fazenda da Amazônia
+          </p>
           <div class="row g-3 w-100 justify-content-center">
             <div class="col-md-4">
-              <form action="submit" method="POST">
+              <form id="lead">
                 <input type="text" name="nome" id="nome" class="form-control mb-2" placeholder="Nome">
                 <input type="email" name="email" id="email" class="form-control mb-2" placeholder="E-mail">
                 <div class="text-center">
@@ -106,9 +108,28 @@
     </div>
     </div>
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+  <script>
+    window.addEventListener('load', function () {
+      // localStorage.setItem() //
+      document.getElementById('lead').addEventListener('submit', function () {
+        const nome = document.getElementById('nome').value
+        const email = document.getElementById('email').value
+        if (nome === '' && email === '') {
+          alert('Informe seus dados corretamente')
+          return false;
+        }
+        alert('Graças a Deus funcionou!')
+        localStorage.setItem('nome', nome)
+        localStorage.setItem('email', email)
+        return false;
+      })
+    })
+  </script>
 </body>
 
 </html>
