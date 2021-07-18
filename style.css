@@ -13,6 +13,25 @@ body{
 }
 
 .section2{
+  background-color: darkgreen;
+  min-height: 100vh;
+  font-family: 'Yomogi', cursive;
+}
+
+.carousel-inner > .carousel-item {
+  max-height: 100vh;
+}
+
+.carousel-item > img {
+  object-fit: contain;
+}
+
+.carousel-caption {
+  background-color: black;
+  opacity: 0.7;
+}
+
+.section3{
   background-color: blueviolet;
   min-height: 100vh;
   font-family: 'Yomogi', cursive;
